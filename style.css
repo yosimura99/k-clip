@@ -68,3 +68,9 @@ code {
 .hint, .foot { color: var(--muted); font-size: 13px; }
 .foot { margin-top: 18px; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.install { margin: 8px 0 12px; }
+.install-btn { display: block; text-align: center; text-decoration: none; margin: 4px 0 10px; }
+.hint a { color: var(--accent); }
+details.card { padding-bottom: 12px; }
+details.card summary { cursor: pointer; color: var(--text); list-style-position: inside; }
+details.card[open] { padding-bottom: 8px; }
