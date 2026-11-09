@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>K.Clip</title>
+  <meta name="description" content="Phím tắt tải clip không logo của Khang">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="K.Clip">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="logo">K</div>
+      <div>
+        <h1>K.Clip</h1>
+        <p class="tag">Share là tải — không logo</p>
+      </div>
+    </header>
+
+    <form id="form" autocomplete="off">
+      <label class="sr" for="url">Link clip</label>
+      <textarea id="url" rows="3" inputmode="url" autocapitalize="off" autocomplete="off" spellcheck="false" placeholder="Dán link TikTok, Telegram công khai, Reels, Shorts, X…"></textarea>
+      <button id="go" class="big-btn" type="submit">Tải clip</button>
+    </form>
+
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <section id="result" hidden>
+      <img id="cover" alt="" hidden>
+      <p id="title"></p>
+      <div id="actions"></div>
+    </section>
+
+    <section class="card">
+      <h2>Cài phím tắt trên iPhone</h2>
+      <ol>
+        <li>Mở app <b>Phím tắt</b> (Shortcuts) → bấm <b>+</b>.</li>
+        <li>Đặt tên <b>K.Clip</b>.</li>
+        <li>Bấm biểu tượng <b>i</b> phía dưới → bật <b>Hiện trong trang Chia sẻ</b> → loại nhận: <b>URL</b> và <b>Văn bản</b>. Nếu không có dữ liệu thì chọn <b>Lấy Clipboard</b>.</li>
+        <li>Thêm thao tác <b>Mã hóa URL</b> (URL Encode), đầu vào là <b>Input của Phím tắt</b>.</li>
+        <li>Thêm thao tác <b>Mở URL</b>, địa chỉ:<br>
+          <code id="shortcut-url">https://yosimura99.github.io/k-clip/?url=</code>
+          rồi chèn biến <b>Văn bản đã mã hóa URL</b> ngay sau dấu <code>=</code>, không để khoảng trắng.
+        </li>
+        <li>Bấm Xong. Trong TikTok, Telegram… bấm Chia sẻ → <b>K.Clip</b>.</li>
+      </ol>
+      <p class="hint">Lần đầu nếu không thấy K.Clip, kéo xuống cuối trang chia sẻ → <b>Chỉnh sửa tác vụ</b> và bật nó lên.</p>
+    </section>
+
+    <p class="foot">TikTok lấy bản không logo. Telegram chỉ với kênh/bài công khai — group chặn tải thì không vượt được. Có thể dán link nếu không share.</p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

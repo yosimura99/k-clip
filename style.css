@@ -1,0 +1,70 @@
+:root {
+  --bg: #0b0d12;
+  --panel: #141822;
+  --line: rgba(255, 255, 255, 0.08);
+  --text: #e8ecf4;
+  --muted: #8a93a6;
+  --accent: #00e5ff;
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.45 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.app {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: calc(20px + var(--sat)) 20px calc(32px + var(--sab));
+}
+header { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.logo {
+  width: 48px; height: 48px; border-radius: 14px;
+  border: 2px solid var(--accent); display: grid; place-items: center;
+  font-weight: 700; font-size: 24px;
+}
+h1 { margin: 0; font-size: 22px; letter-spacing: -0.03em; }
+.tag { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+h2 { margin: 0 0 10px; font-size: 16px; }
+textarea {
+  width: 100%; resize: vertical; min-height: 84px;
+  background: var(--panel); color: var(--text);
+  border: 1px solid var(--line); border-radius: 14px;
+  padding: 12px 14px; outline: none;
+}
+textarea:focus { border-color: var(--accent); }
+.big-btn {
+  width: 100%; margin-top: 10px; border: 0; border-radius: 14px;
+  padding: 14px; font-weight: 650; font-size: 16px; cursor: pointer;
+  background: var(--accent); color: #041016;
+}
+.big-btn:disabled { opacity: 0.55; }
+.btn {
+  display: inline-block; margin: 6px 8px 0 0; padding: 10px 14px;
+  border-radius: 12px; background: var(--panel); color: var(--text);
+  border: 1px solid var(--line); text-decoration: none; font-weight: 600;
+}
+#status { min-height: 1.4em; color: var(--muted); }
+#status.err { color: #ff8aa0; }
+#result { margin: 8px 0 22px; }
+#cover { width: 100%; border-radius: 16px; display: block; background: #000; max-height: 320px; object-fit: cover; }
+#title { margin: 10px 0 0; }
+.card {
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: 16px; padding: 16px 16px 8px; margin-top: 8px;
+}
+ol { margin: 0; padding-left: 1.2em; color: var(--muted); }
+ol li { margin: 0 0 10px; }
+ol b { color: var(--text); }
+code {
+  display: inline-block; margin-top: 6px; padding: 6px 8px;
+  background: #0b0d12; border-radius: 8px; font-size: 12px; word-break: break-all; color: var(--accent);
+}
+.hint, .foot { color: var(--muted); font-size: 13px; }
+.foot { margin-top: 18px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
