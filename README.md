@@ -4,7 +4,7 @@ Trang tải clip không logo, dùng kèm phím tắt Share trên iPhone.
 
 - Trang: https://yosimura99.github.io/k-clip/
 - Nhận link qua `?url=` hoặc `#url=` (phím tắt iOS gửi vào đây).
-- TikTok: bản không watermark. Telegram: chỉ kênh/bài công khai.
+- TikTok: bản không watermark (cả link rút gọn vt/vm.tiktok.com). Facebook: video công khai (share/v, share/r, reel, watch, fb.watch, videos). Telegram: chỉ kênh/bài công khai.
 - Không lưu mật khẩu. Không vượt hạn chế tải của nhóm Telegram.
 
 ## Phím tắt cài 1 chạm

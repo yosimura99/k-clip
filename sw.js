@@ -1,5 +1,5 @@
-var CACHE = 'kclip-shell-v2';
-var SHELL = ['./', './index.html', './style.css', './app.js', './manifest.webmanifest', './apple-touch-icon.png', './icons/icon-192.png'];
+var CACHE = 'kclip-shell-v3';
+var SHELL = ['./', './index.html', './style.css', './app.js', './app.js?v=3', './manifest.webmanifest', './apple-touch-icon.png', './icons/icon-192.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
 });
